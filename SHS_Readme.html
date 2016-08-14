@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: default;
+        text-align: center;
+        color: #000;
+        background: #e3e3db url("data:image/jpeg;base64,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%3D%3D");
+      }
+      #wrap {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 88%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      #header {
+        text-align: center;
+        background: #e5e5e5;
+        border: 1px solid #781808;
+        border-top: 5px solid #781808;
+        border-bottom: 5px solid #781808;
+        padding: 5px 0 13px 0;
+      }
+      #header .about {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-style: italic;
+        color: #555;
+      }
+      #header .menu {
+        font-weight: bold;
+        margin: 0;
+        color: #999;
+      }
+      #header .menu a:link,
+      #header .menu a:visited {
+        color: #333;
+      }
+      #maindiv {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 80%;
+      }
+      #maindiv .content {
+        counter-increment: kman;
+        counter-reset: h2;
+        background-color: #e8e8e6;
+        padding: 0 0 25px 0;
+        margin: 50px auto;
+        border-width: 1px 1px 4px 10px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      #maindiv .content::before {
+        content: counter(kman, lower-roman);
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 35px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      h2 {
+        display: block;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        text-align: left;
+        text-indent: 30px;
+        padding: 0px;
+        margin: 20px 0 0 0;
+        border-bottom: dotted 2px #d0d0d0;
+        border-top: dotted 2px #d0d0d0;
+        background: #deded9;
+        font-size: 160%;
+      }
+      h2::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      #maindiv p {
+        font-size: 100%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 90%;
+        display: block;
+      }
+      #maindiv address a:link {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: transparent;
+        color: #eaeaea !important;
+        padding-right: 5px;
+        padding-left: 6px;
+      }
+      #maindiv address a:visited {
+        background-color: transparent;
+        color: #eaeaea !important;
+      }
+      #maindiv address a:focus,
+      #maindiv address a:hover {
+        text-decoration: none;
+        color: #F1F1F1;
+        border: 0;
+      }
+      #maindiv address a:active {
+        color: #fff;
+        text-decoration: line-through;
+        border: none;
+      }
+      #maindiv address {
+        font-size: 95%;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: none;
+        color: #BBB;
+        background-color: #781808;
+        padding: 3px 0px 0px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        display: block;
+        text-align: right;
+      }
+      #maindiv .important {
+        font-size: 95%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        text-align: left;
+        background-color: #F1F1F1;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 10px;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 160%;
+      }
+      #maindiv .important::before {
+        display: none;
+      }
+      #maindiv .important p {
+        font-size: 100%;
+        text-indent: 0px;
+        margin: 5px 0 10px 0;
+      }
+      #maindiv ul {
+        margin: -10px 0 0 30px;
+        margin-left: 35px;
+      }
+      #maindiv ol {
+        margin: -10px 0 0 35px;
+        margin-left: 40px;
+      }
+      #maindiv .important ul {
+        margin: -10px 0 0 15px;
+      }
+      #maindiv .important ol {
+        margin: -10px 0 0 20px;
+      }
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      #maindiv ol li {
+        line-height: 150%;
+      }
+      .t1 {
+        font-weight: bold;
+        width: 26%;
+        text-align: right;
+        clear: right;
+        float: left;
+        line-height: 22px;
+      }
+      .t2 {
+        text-align: left;
+        width: 73%;
+        float: right;
+        line-height: 22px;
+      }
+      hr {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        height: 1px;
+        border: 0;
+        color: #aaa;
+        background-color: #aaa;
+      }
+      hr.floatfix {
+        clear: both;
+        color: #e8e8e6;
+        background-color: #e8e8e6;
+      }
+      h1 {
+        font-size: 225%;
+        color: #444;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        width: 100%;
+      }
+      h3,
+      h4,
+      h5 {
+        margin: 10px 40px 10px 40px;
+        padding: 0;
+      }
+      h3 {
+        font-size: 125%;
+        font-style: italic;
+      }
+      h4 {
+        font-size: 125%;
+      }
+      h5 {
+        font-size: 100%;
+      }
+      h6 {
+        width: 100%;
+        margin: 10px 0 15px 0;
+        background-color: #ECECEC;
+        text-align: left;
+        text-indent: 30px;
+        font-size: 100%;
+        font-style: italic;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: solid 1px #bbb;
+        border-top: solid 1px #bbb;
+      }
+      a:link {
+        color: #781808;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #781808;
+      }
+      a:hover,
+      a:active {
+        color: #222;
+        border-bottom: 1px solid black;
+      }
+    </style>
+    <title>SPELLHOLD STUDIOS - Mod title</title>
+    <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAJkA////APz8/AD9/f0AJCSnABUVoQDw8PkA0tLtALe34gAPD58AgYHNAHh4yQAqKqoA8/P6ABsbpAAMDJ4AMzOtALS04QADA5oAycnpAPz8/gAYGKMAOTmwAM/P7ADV1e4A9vb7ANvb8QBOTrgAh4fPAFFRuQBXV7wAHh6lAGNjwQDMzOsAS0u3AKWl2wCQkNMAiorQAMPD5wCrq90AWlq9ABISoAC6uuMACQmdAMbG6ADY2O8A5+f1AGlpwwA2Nq8A4eHzAFRUuwBycscArq7fACEhpgAtLasAPDyxAGxsxAC+vuQA5OT0AEJCswCWltUAp6fbAMDA5gB1dcgAJyepAO3t+AD5+f0AU1O5AFlZvACvr98AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwEBAQgAAAAeJj4UDgwBAgMBAQEkAAAADy0GLg8FAQIDAQEBIhAfEgAAEAUAAA0CAwEBBjMHDTgMAAAVFgAhAgMBARgxCAcBCDcABBgAPAIDAQY6BAAOIiEIBQALKxYCAwENNgAQMABAEx8ACSQFOQMBJxwdBy8AAAsjNQARAQIDAQsHHCkdKiUEQgwACgECAwEoBAAAHgEBOyUAAAoBAgMZDgAAAAAgGg8AAAARAQIDGwAJAAAAAAAAAAAEGSwCPQUXFwkAAAAAAAAABBsaAkM0AQETFQAAAAAACQEBAQJEFAEBAUEKID8jMhIBAQECRQEBAQEBAQEBASYABgEBAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%3D">
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <a id="top"></a>
+        <h1>Mod title</h1>
+        <strong>A Spellhold Studios mod for Baldur's Gate 2: SoA/ToB</strong>
+        <hr>
+        <p class="about">
+          Authors: Foo Bar, Baz Gazonk
+        </p>
+        <p class="about">
+          <a href="http://www.spellholdstudios.net/">Mod Website</a> &#8226;
+          <a href="http://www.shsforums.net/">Mod Forum</a> &#8226;
+          Version: 1.0
+        </p>
+        <hr>
+        <p class="menu">
+          <a href="#intro">Introduction</a> &middot;
+          <a href="#installation">Installation</a> &middot;
+          <a href="#faq">FAQ</a> &middot;
+          <a href="#credits">Credits</a> &middot;
+          <a href="#version">Version History</a>
+        </p>
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== I n t r o d u c t i o n ================== -->
+        <a id="intro"></a>
+        <div class="content">
+          <h2>Introduction</h2>
+          <p>Intro text.</p>
+          <p>Intro text and <a href="http://www.spellholdstudios.net/">link</a>.</p>
+          <address>
+            <span class="footer">Mod title &gt; Introduction</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== I n s t a l l a t i o n ================== -->
+        <a id="installation"></a>
+        <div class="content">
+          <h2>Installation</h2>
+          <p>Example paragraph with various stuff like <em>italic text</em> and maybe even <strong>bold text</strong>.</p>
+          <p>Another paragraph with <a href="http://www.google.com/">a random link</a>.</p>
+          <div class="important">
+            <p>Example of important info or whatnot, use it as you like.</p>
+          </div>
+          <address>
+            <span class="footer">Mod title &gt; Installation</span> <a href="#top">Back To Top</a>
+          </address>
+          <p>Let's see, what else... Ah right, headers. You have h3-h5 at your disposal, the first two and last one are reserved. Here you go:</p>
+          <h3>This is h3</h3>
+          <h4>This is h4</h4>
+          <h5>This is h5</h5>
+          <p>Here's an example of an unordered list:</p>
+          <ul>
+            <li>Item number one</li>
+            <li>Item number two</li>
+            <li>Item number three</li>
+            <li>Item number four</li>
+          </ul>
+          <p>And an ordered one:</p>
+          <ol>
+            <li>Item number one</li>
+            <li>Item number two</li>
+            <li>Item number three</li>
+            <li>Item number four</li>
+          </ol>
+        </div>
+
+        <!-- ================== F A Q ================== -->
+        <a id="faq"></a>
+        <div class="content">
+          <h2>Frequently Asked Questions</h2>
+          <p><strong>Q: Question goes here! Lorem ipsum?</strong><br>A: Answer here. Bad latin, sir.</p>
+          <p><strong>Q: Let's add another question, just for the sake of it.</strong><br>A: Good idea, sir.</p>
+          <address>
+            <span class="footer">Mod title &gt; FAQ</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== C r e d i t s ================== -->
+        <a id="credits"></a>
+        <div class="content">
+          <h2>Credits</h2>
+          <p>For all your credit needs, &lt;span class="t1"&gt; and &lt;span class="t2"&gt; are your best friends.</p>
+          <span class="t1">Writer:</span> <span class="t2">Foo Bar</span><br>
+          <span class="t1">Coder:</span> <span class="t2">Baz Gazonk</span><br>
+          <hr class="floatfix"><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Mod title &gt; Credits</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== V e r s i o n   H i s t o r y ================== -->
+        <a id="version"></a>
+        <div class="content">
+          <h2>Version history</h2>
+          <h6>17 May 2011 - Version 2.12:</h6>
+          <ul>
+            <li>Change no. 1</li>
+            <li>Change no. 2</li>
+          </ul>
+
+          <h6>11 April 2008 - Version 2.11:</h6>
+          <ul>
+            <li>Change no. 1</li>
+            <li>Change no. 2</li>
+          </ul>
+          <address>
+            <span class="footer">Mod title &gt; Version History</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
