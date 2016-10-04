@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Sounds of the Sword Coast</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="http://www.shsforums.net/favicon.ico" />
+    <style type="text/css">
+      body {
+        margin: 20px auto;
+        padding: 0;
+        text-align: center;
+        color: #000;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        width: 88%;
+        background: #e3e3db url('http://spellholdstudios.net/images/sh_bg_main.jpg');
+      }
+      #header_top {
+        font-size: 200%;
+        font-weight: bold;
+        line-height: 70%;
+        background-color: #fff;
+        border-right: 1px solid #781808;
+        border-left: 1px solid #781808;
+        border-top: 4px solid #781808;
+        border-bottom: 1px solid #781808;
+        padding: 16px 0px 12px 0px;
+        color: #1e1e1e;
+      }
+      .mod_title {
+        font-size: 40%;
+        color: #333;
+      }
+      .studio {
+      color: #781808;
+      font-size: 110%;
+      font-style: italic;
+      }
+      a.shslink, a.shslink:visited {
+        color: #781808;
+        text-decoration: none;
+      }
+      a.shslink:hover, a.shslink:active {
+        color: #781808;
+        text-decoration: underline;
+      }
+      .game {
+      color: #532529;
+      font-size: 120%;
+      font-style: italic;
+      }
+      #header_middle {
+        font-size: 80%;
+        font-weight: bold;
+        line-height: 110%;
+        background-color: #f1f1f1;
+        border-right: 1px solid #781808;
+        border-left: 1px solid #781808;
+        padding: 10px 0px 10px 0px;
+        color: #bbb;
+      }
+      .about {
+        color: #532529;
+        font-weight: normal;
+      }
+      .author_version {
+        color: #532529;
+      }
+      .website_forum {
+        color: #532529;
+        font-weight: normal;
+      }
+      a.website_forum, a.website_forum:visited {
+        color: #532529;
+        text-decoration: none;
+      }
+      a.website_forum:hover, a.website_forum:active {
+        color: #781808;
+        text-decoration: underline;
+      }
+      #header_bottom {
+        font-size: 90%;
+        font-weight: normal;
+        line-height: 110%;
+        background-color: #f1f1f1;
+        border-right: 1px solid #781808;
+        border-left: 1px solid #781808;
+        border-top: 1px solid #bbb;
+        border-bottom: 4px solid #781808;
+        padding: 10px 0px 10px 0px;
+        color: #bbb;
+        word-spacing: 16px;
+      }
+      .menu {
+        color: #333;
+        font-weight: bold;
+        font-variant: small-caps;
+      }
+      a.menu, a.menu:visited {
+        color: #333;
+        text-decoration: none;
+      }
+      a.menu:hover, a.menu:active {
+        color: #781808;
+        border-top: dotted #781808;
+        padding: 7px 0 7px 0;
+      }
+      #maindiv {
+        margin: 40px auto;
+        text-align: justify;
+      }
+      #maindiv .content {
+        counter-increment: section;
+        counter-reset: h1;
+        margin: 40px auto;
+        background-color: #f1f1f1;
+        padding: 0 0 16px 0;
+        border-width: 1px 1px 4px 8px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      #maindiv .content::before {
+        content: counter(section, upper-roman);
+        font-size: 75%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 30px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      a.content_link, a.content_link:visited {
+        color: #781808;
+        text-decoration: none;
+      }
+      a.content_link:hover, a.content_link:active {
+        color: #532529;
+        text-decoration: underline;
+      }
+      #maindiv .backtop {
+        font-size: 75%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 25px;
+        bottom: 0px;
+        right: 0px;
+        display: block;
+        position: absolute;
+      }
+      a.backtop_link, a.backtop_link:visited {
+        color: #eee;
+        text-decoration: none;
+      }
+      a.backtop_link:hover, a.backtop_link:active {
+        color: #deded9;
+        text-decoration: underline;
+      }
+      #maindiv p {
+        font-size: 80%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 95%;
+        display: block;
+      }
+      #maindiv .important {
+        text-align: justify;
+        background-color: #fff;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 4px;
+        margin: 20px auto;
+        width: 90%;
+      }
+      #maindiv .important::before {
+        display: none;
+      }
+      #maindiv .important p {
+        text-indent: 0px;
+        margin: 5px 0 5px 0;
+        display: block;
+      }
+      #maindiv .description {
+        text-align: justify;
+        margin: 0px auto;
+        width: 99%;
+      }
+      #maindiv .description::before {
+        display: none;
+      }
+      #maindiv .description p {
+        margin: 8px auto;
+        display: block;
+      }
+      #maindiv ul {
+        margin-top: -15px;
+        margin-left: 12px;
+        font-size: 80%;
+        width: 92%;
+      }
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      h1 {
+        background-color: #deded9;
+        border-bottom: solid 2px #d0d0d0;
+        border-top: solid 1px #d0d0d0;
+        margin: 25px 0 0 0;
+        font-size: 120%;
+        text-indent: 25px;
+        padding: 0px;
+        display: block;
+      }
+      h1::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      h2 {
+        margin: 20px auto;
+        font-size: 90%;
+        width: 95%;
+        border-bottom: dotted 2px #d0d0d0;
+        display: block;
+      }
+      h3 {
+        margin: 20px auto;
+        font-size: 80%;
+        width: 95%;
+        padding: 2px 0px 0px 5px;
+        border-top: dotted 1px #d0d0d0;
+        border-left: dotted 1px #d0d0d0;
+        display: block;
+      }
+      h4 {
+        margin: 20px auto;
+        font-size: 80%;
+        width: 95%;
+        border-bottom: dotted 2px #b5b5b5;
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <a id="top"></a>
+    <div id="header_top">
+      Sounds of the Sword Coast<br />
+      <span class="mod_title">A <span class="studio"><a href="http://www.spellholdstudios.net/" class="shslink">Spellhold Studios</a></span> Mod for <span class="game">Baldur's Gate</span></span>
+    </div>
+    <div id="header_middle">
+      <span class="about">Author</span>: <span class="author_version">Tash</span> | <span class="website_forum"><a href="http://www.shsforums.net/files/file/1090-sounds-of-the-sword-coast/" class="website_forum">Website</a></span> | <span class="website_forum"><a href="http://www.shsforums.net/topic/57488-sounds-of-the-sword-coast/" class="website_forum">Forum</a></span> | <span class="about">Version</span>: <span class="author_version">2.4</span>
+    </div>
+    <div id="header_bottom">
+      <span class="menu"><a href="#intro" class="menu">Introduction</a></span> <span class="menu"><a href="#compatibility" class="menu">Compatibility</a></span> <span class="menu"><a href="#installation" class="menu">Installation</a></span> <span class="menu"><a href="#components" class="menu">Components</a></span> <span class="menu"><a href="#versions" class="menu">Versions</a></span> <span class="menu"><a href="#credits" class="menu">Credits</a></span>
+    </div>
+    <div id="maindiv">
+    <!-- ================== I n t r o d u c t i o n ================== -->
+      <div class="content">
+        <a id="intro"></a>
+        <h1>Introduction</h1>
+        <p>This small mod for <i>Baldur's Gate</i> repairs various sound files in the game which suffer from audible compression artifacts or some degree of clipping. The original spell casting voices are especially affected and often unpleasant to listen to.</p>
+        <p>There are a few additional components, all of which attempt to improve the sonic experience of the game. Naturally, the mod is aimed at the enthusiasts of <i>Baldur's Gate</i> who still prefer to play the game as it was originally designed.</p>
+        <div class="important">
+          <p><strong>Note</strong>: This mod is only posted in the <a href="http://www.shsforums.net/files/category/1-baldurs-gate-ii-mods/?dosort=1&amp;sort_key=file_updated&amp;sort_order=desc" class="content_link"><i>Baldur's Gate II</i></a> section, as <a href="http://www.shsforums.net/files/" class="content_link"><i>Spellhold Studios</i></a> does not currently have an appropriate category for <i>Baldur's Gate</i>.</p>
+        </div>
+        <span class="backtop"><a href="#top" class="backtop_link">&#9650;</a></span>
+      </div>
+    <!-- ================= C o m p a t i b i l i t y ================= -->
+      <div class="content">
+        <a id="compatibility"></a>
+        <h1>Compatibility</h1>
+        <p>This is a WeiDU mod, which basically means it is intended to be compatible with most other available mods (<a href="http://weidu.org/main.html#weidu" class="content_link"><i>WeiDU.org</i></a>).</p>
+        <div class="important">
+          <p><strong>Note</strong>: No spell or area files are overwritten during the installation process; this mod only patches the existing spell and area files to change sound effects. If any other mod overwrites the patched files, these changes will be lost. Therefore, it is best to install <i>Sounds of the Sword Coast</i> after any other mod which introduces new spells or makes changes to the existing ones.</p>
+        </div>
+        <span class="backtop"><a href="#top" class="backtop_link">&#9650;</a></span>
+      </div>
+    <!-- ================== I n s t a l l a t i o n ================== -->
+      <div class="content">
+        <a id="installation"></a>
+        <h1>Installation</h1>
+        <p>Install <i>Sounds of the Sword Coast</i> just like any other WeiDU mod: extract the file "Setup-!BSotSC.exe" and the folder "!BSotSC" to your main <i>Baldur's Gate</i> directory. Then run "Setup-!BSotSC.exe" and follow the prompts to install each individual component.</p>
+        <p>To uninstall the mod, simply run "Setup-!BSotSC.exe" again and follow the prompts just like during the installation.</p>
+        <div class="important">
+          <p><strong>Note</strong>: You can install any of the available components independently.</p>
+        </div>
+        <span class="backtop"><a href="#top" class="backtop_link">&#9650;</a></span>
+      </div>
+    <!-- ==================== C o m p o n e n t s ==================== -->
+      <div class="content">
+        <a id="components"></a>
+        <h1>Components</h1>
+        <h2>Repaired Spell Casting Sound Effects</h2>
+        <div class="description">
+          <p>This is the main component which contains fixed audio files for all the damaged spell casting voices and sound effects.</p>
+        </div>
+        <h2>Consistent Spell Casting Sound Effects</h2>
+        <div class="description">
+          <p>This component brings more consistency to many spells which awkwardly use sound effects reserved for other spell casting schools. Notably, it patches spell expiration sound effects to match their appropriate schools.</p>
+          <p>In addition, the component corrects minor slips in spell casting schools and sound effect parameters, as well as restoring a few spell casting sound effects which were most probably disabled due to typing errors.</p>
+        </div>
+        <h2>Restored Missing Ambient Sound Effects</h2>
+        <div class="description">
+          <p>Several areas in the game have invalid or no ambient resources. This component patches the areas to use proper ambient sound effects.</p>
+        </div>
+        <h2>Tweaked Bow Combat Sound Effects</h2>
+        <div class="description">
+          <p>These are modified bow draw and release sound effects which match the speed of the original combat animations slightly better.</p>
+        </div>
+        <h2>Alternate Chunked Death Sound Effect (Gore)</h2>
+        <div class="description">
+          <p>This is an alternate version of the "chunked death" sound effect intended for those of a more... sadistic inclination. Splatter!</p>
+        </div>
+        <h2>Mute Tooltip Paper Sound Effect</h2>
+        <div class="description">
+          <p>Some people quickly get fed up with the paper-like sound played when tooltips roll out on the screen. Burn it. Now.</p>
+        </div>
+        <span class="backtop"><a href="#top" class="backtop_link">&#9650;</a></span>
+      </div>
+    <!-- ====================== V e r s i o n s ====================== -->
+      <div class="content">
+        <a id="versions"></a>
+        <h1>Versions</h1>
+        <h3>v<span class="author_version">2.4</span></h3>
+        <ul>
+          <li>Included a neat HTML readme.</li>
+          <li>Prevented a potential compatibility issue with the adjusted sound effect parameters.</li>
+          <li>Removed invalid or non-existent bird sound effects from the affected ambients.</li>
+          <li>Further reduced the volume of the added day/night ambients.</li>
+        </ul>
+        <h3>v<span class="author_version">2.3</span></h3>
+        <ul>
+          <li>Improved the code to keep up with the standards.</li>
+          <li>Merged all the separate spell patches into one component: "Consistent Spell Casting Sound Effects."</li>
+          <li>Corrected the spell casting schools of Friends, Flame Arrow and Shadow Door.</li>
+          <li>Adjusted the sound effect parameters of the innate Protection from Evil and Larloch's Minor Drain.</li>
+          <li>Added day/night ambients to Tenya's house, Aldeth's lodge, the fishing village, the farmlands, the High Hedge cabin, Cloakwood Mines ground and the treehouse.</li>
+          <li>Restored the spell casting sound effect of Dryad Teleport (Dimension Door used by certain NPCs).</li>
+          <li>Swapped the existing horse ambients for slightly more appropriate variants, reduced their playback volume and added some pitch/vol variance.</li>
+          <li>Higher compatibility due to smart patching methods.</li>
+          <li>Minor volume tweaks to the repaired audio files.</li>
+        </ul>
+        <span class="backtop"><a href="#top" class="backtop_link">&#9650;</a></span>
+      </div>
+    <!-- ======================= C r e d i t s ======================= -->
+      <div class="content">
+        <a id="credits"></a>
+        <h1>Credits</h1>
+        <h4>Mod author</h4>
+        <div class="description">
+          <p><a href="http://www.shsforums.net/user/40408-tash/" class="content_link">Tash</a></p>
+        </div>
+        <h4><i>Baldur's Gate</i> creators</h4>
+        <div class="description">
+          <p><a href="http://www.bioware.com" class="content_link">BioWare</a></p>
+          <p><a href="http://www.obsidian.net" class="content_link">Black Isle Studios</a></p>
+        </div>
+        <h4>Tools used</h4>
+        <div class="description">
+          <p><a href="http://www.7-zip.org/" class="content_link">7-Zip</a> by Igor Pavlov</p>
+          <p><a href="http://web.audacityteam.org/" class="content_link">Audacity</a> by the Audacity Team</p>
+          <p><a href="http://gibberlings3.net/forums/index.php?showforum=137" class="content_link">DLTCEP</a> by Avenger</p>
+          <p><a href="http://gemrb.org/iesdp/" class="content_link">IESDP</a> maintained by igi</p>
+          <p><a href="https://github.com/Argent77/NearInfinity" class="content_link">Near Infinity</a> by Jon Olav Hauglid (updated by Argent77)</p>
+          <p><a href="http://notepad-plus-plus.org/" class="content_link">Notepad++</a> by Don Ho</p>
+          <p><a href="http://www.shsforums.net/files/file/876-ps-gui/" class="content_link">PS gui</a> by Sam.</p>
+          <p><a href="http://sox.sourceforge.net/" class="content_link">SoX</a> by Chris Bagwell and contributors</p>
+          <p><a href="http://www.weidu.org/~thebigg/" class="content_link">WeiDU</a> by Westley Weimer (updated by the bigg and Wisp)</p>
+          <p><a href="http://www.teambg.org" class="content_link">WinBiff</a> by Theo</p>
+        </div>
+        <h4>Special thanks</h4>
+        <div class="description">
+          <p><a href="http://www.shsforums.net/user/10953-alien/" class="content_link">ALIEN</a>, <a href="http://gibberlings3.net/forums/index.php?showuser=7356" class="content_link">CrevsDaak</a>, <a href="http://www.shsforums.net/user/10954-dakk/" class="content_link">Dakk</a>, <a href="http://gibberlings3.net/forums/index.php?showuser=2129" class="content_link">Jarno Mikkola</a>, <a href="http://www.shsforums.net/user/15769-mad-mate/" class="content_link">Mad Mate</a> and <a href="http://www.shsforums.net/user/3563-salk/" class="content_link">Salk</a> for additional support and feedback.</p>
+          <p><a href="http://www.blackwyrmlair.net/MemberPages/baronius.php" class="content_link">Baronius</a> of the <a href="http://www.blackwyrmlair.net/" class="content_link"><i>Black Wyrm's Lair</i></a> for maintaining the <a href="http://forums.blackwyrmlair.net/index.php?showtopic=113" class="content_link">Community Filename Prefix Reservation List</a>.</p>
+          <p><a href="http://gibberlings3.net/forums/index.php?showuser=8" class="content_link">CamDawg</a> and <a href="http://www.shsforums.net/user/5803-miloch/" class="content_link">Miloch</a> for painstaking code snippets with comments and numerous WeiDU how-tos.</p>
+          <p><a href="http://www.shsforums.net/user/3481-kaeloree/" class="content_link">Kaeloree</a> and <a href="http://www.shsforums.net/user/2832-sconrad/" class="content_link">SConrad</a>, the admins of <a href="http://www.shsforums.net" class="content_link"><i>Spellhold Studios</i></a>, for hosting this mod.</p>
+          <p><a href="http://gibberlings3.net/forums/index.php?showuser=1412" class="content_link">Mike1072</a> of the <a href="http://gibberlings3.net" class="content_link"><i>Gibberlings Three</i></a> for vital code suggestions and guidelines on arrays.</p>
+          <p><a href="http://www.shsforums.net/user/10485-sam/" class="content_link">Sam.</a> for the awesome <a href="http://www.shsforums.net/topic/56523-help-offered-html-readmes/" class="content_link">customizable readme template</a>.</p>
+          <p>Everyone else from the <a href="http://www.blackwyrmlair.net/" class="content_link"><i>Black Wyrm's Lair</i></a>, the <a href="http://gibberlings3.net" class="content_link"><i>Gibberlings Three</i></a>, <a href="http://www.pocketplane.net" class="content_link"><i>Pocket Plane Group</i></a>, <a href="http://www.shsforums.net" class="content_link"><i>Spellhold Studios</i></a> and other modding communities for keeping Infinity Engine running.</p>
+        </div>
+        <span class="backtop"><a href="#top" class="backtop_link">&#9650;</a></span>
+      </div>
+    </div>
+  </body>
+</html>

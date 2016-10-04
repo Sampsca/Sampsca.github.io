@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <style type="text/css">
+      body {
+        margin: 0;
+        padding: 0;
+        cursor: default;
+        text-align: center;
+        color: #000;
+        background: #e3e3db url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAgAAZABkAAD/7ABlRHVja3kAAQAEAAAAUAADAFAAAAAmAE0AYQByAGMAaAAgADQAIABXAGUAYgAgAFMAbwBsAHUAdABpAG8AbgBzACAALQAtACAAdwB3AHcALgBtAGEAcgBjAGgANAAuAHcAcwAA/+4ADkFkb2JlAGTAAAAAAf/bAIQAAgICAgICAgICAgMCAgIDBAMCAgMEBQQEBAQEBQYFBQUFBQUGBgcHCAcHBgkJCgoJCQwMDAwMDAwMDAwMDAwMDAEDAwMFBAUJBgYJDQsJCw0PDg4ODg8PDAwMDAwPDwwMDAwMDA8MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwM/8AAEQgAZABkAwERAAIRAQMRAf/EAHcAAAMBAQEBAAAAAAAAAAAAAAIDBAEABQkBAQEBAAAAAAAAAAAAAAAAAAACBBAAAgEDAwIEAwcCBQUBAAAAAQIRIRIDADETQSJRYTIEcYEUkaGxwUJSI9Ez4fFyQyTwotKDRFQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APsgnvGy5HcKEDLYXxwX2Ed/aSabEx+WNahx7hMh5MxJxKzhgA5UqbTQypMwen5aCdit6ZMQZHx9pyEdwO5hQLJMwBNfnoD90ztkbEH5gqKCCxIkAGApPjSvgfMaCIMRkB7GLMUAAA2Py2nafDQUYXGQw2GEQAMxdcZEjYzRhJ8NBZyvjDO8nGBkUyKvAFhBIgSK1FR0jQAhUr3ZFNillxEJIgghaDZSvWB8a6CTJlOWGKrjChShAJAgwoMV+z+ug7Hn+nUgWOmTuZisGTVhQiR2in5ToGIxbLzO/HjVUlxcIAUgBfVWDMfhoHXYFHI+Zcs4ypQ3EuJUyzm2ZMCeg+4EfU57eW5eTlt+q6zM2XREaBWQlMmRcphsZIYAmrSVjcA+Bp8PHQWn/kyynjGQnJ2gFVipDMTKiWMgiJExoA92Uxo4yIwLmlwnY0IEAgR4nfad9BECSFHRAQQ0gqRBms+FR+WgeMOamQYXtQEB1mCyyoikfj8NxoHMj+1Y40vwYySocmL4kGTM1j+nUkFtjZ72XMz50a0gsGiwyNqigNOoBPloJ25LGaHkLcYEgVFWptWk7x4aAXoaGRNwttigEt0mooJ8ttAQS1i8BrWIyBwSYMzJmvWhGge4xgYAp5LULPxgiS/ram8UH+WgUiM7MFE46S6jtBJMRaJ+Hn56Cv6R7OH6nF/+ia22+mZiImkz91dBOSFcZGcMp7mJA/fXbYgkz91K6CpCwCFSqlnty5bJMrWGrEbHaaGsDQT5/b8acih0VwMuNla+AQBErPh4/wCAcntk7zmNXte0DYNCrAiTF0wNqddgJRlZSEZnGCrBt7gAFUzStRA3HjGgJVy5QHyYA3cWsGXjVgQJoZoSNx10DMQNuZFAKJ3KSJJtUgQe4AhgFFDO1RoMZseJHIzYimbGUxIFA7gpBgi6Setf2yToIlwnI2RgoyIFbuLQB/qYmJIPn8tA1/a52MJ/ykwBSShmpqKRLClCBB0FmJc6e2RO5SjsMbMpgwymDAJo0n7oPQCVUbFmwCMZBYZCUYILhYQLqiABNdj8tA3jEf3D9Vx8X00C27ijaIm6k/KdB4q5MivkT27nES0KUYreTI6GKDQNy32lnbI9gBF9aETSpAkqOmgrVLCqF0tQ25IFaTKm4CQzU67zSg0BM5yooQtiQlShEsQAGvuELJEbA+npE6BZ7TjK4wbmV1PIHuKVAMGgNR1H2aDVzviyMMBa8NZkyiCGMlRQ7AHYRG3wATE58+RMzMBkSl5hJaN+2LjQRB8PDQUtkfItvucgORHuzCQi2N6n7YkkQf8Ao6BPuF48qBscJiVCmMzcCQszsJqK7U0Be3vyDIuJWyMajKok3D0qWA2kUIYb1kCNBXjIYsBDDHAysYVR2KCRELIHTpSm+gkf3NyBFRcfGBGae9STEgiB6TQx+Wgj5MnHbC8dt3SZmIiZj7/w0GurEISbmghELTBBgCKA76AGLFrCSDinu2Xt22MyNBW+QluVK43csgJWgJ2EjtIkSCaD7dAjHkdC7YiRmcn+QMBNNhB67H5aCnFlb3OZcTFs6sbQ7FpW39Qn9s18fwDG9yz5DyDIrM2S9Jh0D0KAtNPzO3Qgx8q4sjWSFC41EElkKpbBn9skEU84OgfkfG6q8c2VUDMiqA0Gl4JJKRuY+NCdB5+R8uQtl4jaQshE7J3CgxMCkDQX8ZxouPHlxAOqkI8sQ7gQAF28RSvTqSG+8yZcdRK5Qv8AMawFIAO4EyKSR2+e+g8sEkSDCIJVlIKgAkGYAHjFPDz0GXnbs4/XFbtt/Db5aA2ZSqoihnYQSJMV8yJqPhHloDPJAKhij0RgIWayQSYJ8f6ToH4MebGFuxd0hFFyJWLlIGQVIJ8fx0D2c+5Dk/yuA3G7EYwFQEkqdolQD8ZgaAMeL26cxYEiGLvjLA9tzW1KmsbbkgkmmgzNk9t6xbj9ytrAAljUiSCwCz5gxFRoJF7HalyE3BZNxgiZ3nboSdBUl2QHL7XEv8MiGgCQaSpCgGRAjwiugaQt75TlHA6r/EIO5BCqQwNGHiomY6jQbmQMQVcKyO6OrLsbRKKIUkQpiOnnEhPxYs+I5rDjVnZmCt2qI7ZuNbpihHynQF9I+TGzYyzsDNtphyQD2+fcadOugkhZiw3TbZ849O03U20BSOQIRehYBkG8CZBr1E1jQUe59yoVVURmHqY0iKQIgBgADUGJ0CHyDIFHEtxYu/7nYyCaUoFBgDxjQWuG4s3GWtLB8eBaOqwLZVa0YkneT9ugmGVzjfC4DsQAC0mIJX0gVisCKH56A8Rz/TKMr5MeLIXQMiswUt+oxTc9RPhoGY1XK3MKBVpAUyYABCM1s9wpXfxroF414RkeR7a82KWF/pjrFp3EE7zM6B/t3YhbWvfGFbJkBJY/pezzApNaTGghy58ysyMqsaqHE7kWxuothoH3aAe0Hc3xcTEiDHduVMA+H3V0FOJ2x3qkriIJcUHpIa8yIFaee0+AKk/V2QOSbogW/wCuYiY6R5aBmPAMebEYYN3QqAT2IMgo0kEyf8dAjI4yjHCsWA9bmWdtqkEAUiKeU10CMuUZA6Y3MSAzAUgb1rIM/wCWgeXAD4rlvlWL7MYFLoMACBQR5zE6BuJBlx3ZHZsuIkYVWBJhu24VNVp9nhoOL5MS8C4lfIMYDFQxILiCpBpMmNvAaCnEpn28hly4oC4ySGopkkTcKEmgr5mNBK7syBYLZZ5bwVMAhIoKdvhFBXxgFM2zT3OSB3dYkjuoJ/OdBjHI4Zn5GZS0SSZBJXeCDE9NArsUl2kQFYiZMgSCYBIroK8ZyqxfHxo2UFSjFRcJP6ZM9dunnoGXrPLyHkt47bBbdMbbW2UmNqxOgc7D3JksFfLLPjuCKBjFVJJUxHUA7CdqhyviLHHzMVuK4MTgWq4orW1YV6zJmvXQQuQA3FkN9veWWJIkXRSABQSOk0k6BRN4uYEYQ0qpgFiAd676B2PMEDoxksAzfrHZEiPnSvnuNBVdgxBMUYTe85WQmyDvaDJujzp0FToDzIMOSbynFLhSFCkK3GNpg1H20iBoJ8meAcgyF3dw2QOwBAUmAhWZIJiSI+7QE/vL5V8bYkJngMFRcZBW0LUGN+vga6BDqyY5vBXJ3YXqQKlrbp2Nu58/AwBYMIzB1aWbtZbVkkD1Urca7jbceYV4EOLFiUZLjdYiItwcAkssNBI3E7CYrNAbGPkupF0zYOOfT/ct36zE210E+NLfb3HMO4nG7k21DT23MOq02JMmRGgTlGMuHxOC7C4gAiASAuxpNIG4/EMTFjyh8jTiylrVwiJMCGs7lNT0+zw0AZsYQFkcMT+thZAeYgwfOg+cHQWgJjXlyhECJj/27mDN3bNSYiTEzPzCInCrPkxhlZiXU5ACEAM9vczdd/z0HYXU5kvLH2xDC4ifhA8jH5V0G5pOSxETE2KJxrHRfUBFpnen26BRYOGGNmLs3YqmCTEyT5dCRoLGyJk9sroby1uXNKRdCBSQa7EGT4/A6BGMS6Ua5yFAIIJif1dLiQJP5aC3Gczo7lWKoGHaxDFVU9wYiKzIMdT1jQK48HH9X328t309qzfO187R/wCUaDsmf/jQ/b7nGCArKWqSGgmN7QQekUOgE4vbc75rTkxY3VGCPcQGeJbc7Qa9aaAGK4smJcHGMjqFuADkEtIKkSZiNvkNA5oxYBw43ecJRspqLJuCztdJPw+/QSksMPG7lnVhkKvICAhu2s/qavX56BFFh3CuuRLVVeu81nzMCRMdI0DUJOUsE7cdCPOoBkDcTTePxCvLkw5QkMytQpBWkACoApXfx3GgF8Pdixe3XlYXB3xm9SYgEQCFmSK/loDIx5xkJzC4tcnt5K2dvQQaqSDQCfu0BqHtcK+Ns6LcmJESVCiRMKNiCJoB0rTQS5Fy4X7cwYjtdZuLCRcQOo3IPxECNA7+CPR38Vl/G0xbHjbM9No69NAlPp+N05Hysq3K4ZUDljAoRT1Gs/jGgZLN7hceQY+MOnIjEQq1EFoFwAmI840BZcS+3ysLgr4RyoSorY9omBJYkDyM6AFz5UxqcWZlJpFKEGAKQCY7RI26bQBZcONWygkBFBdsLEg2q9pa6R8dttAp2RgVxqVjtVpqIiahiCRERHWdAsIVYPkUj252BlQyisb+nbQVLgw5FyDFjVpHaOT1ljG5JtOwFN+tdBK4woFsVSqsOX9ax4EgSOtY+e+gsW1i+RXYnItFNhDsZWW2hiGiog+MkHQKytkxIHV19yMk8mYkG0EA3ErIDWyKGY+UAIwl15WNpaC7EAKDUC43UqJ2O9ToJrBHFDftstaZj4Xb9Pl56DcV8twWTcbNvP8Ad27x57xoKVnk9zxW3QfpbZjc22+fh5T1jQblnlrdwcLb2zbXe7rf9+3TQFmjkebOTiWLZsvil80ifCm00nQS4eTnPLfyWiLpi2TfM9LvGs6BbRK2Rbb/ADW3bybfVWZj7/PQejk/t0/tfy8t0+qW3tpM7R59NApeLhp/chOPiid1i2KxM/doF57ZPHbx+U2+pvCm0THnoFrPHk4LL7P12xE99v3R5XT10Hp5+Pi95dPpx8m9lnJW7pdM7fLQK9v6Wut+jinJ+yt0z3R4ee1J0Bf/AHf7Vt//ALLp+yf+3Qf/2Q%3D%3D");
+      }
+      #wrap {
+        text-align: left;
+        margin: 0 auto;
+        margin-top: 20px;
+        width: 88%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+      }
+      #header {
+        text-align: center;
+        background: #e5e5e5;
+        border: 1px solid #781808;
+        border-top: 5px solid #781808;
+        border-bottom: 5px solid #781808;
+        padding: 5px 0 13px 0;
+      }
+      #header .about {
+        margin: 7px 0 0 0;
+        padding: 0;
+        font-style: italic;
+        color: #555;
+      }
+      #header .menu {
+        font-weight: bold;
+        margin: 0;
+        color: #999;
+      }
+      #header .menu a:link,
+      #header .menu a:visited {
+        color: #333;
+      }
+      #maindiv {
+        margin: 0 auto;
+        margin-top: -20px;
+        width: 80%;
+      }
+      #maindiv .content {
+        counter-increment: kman;
+        counter-reset: h2;
+        background-color: #e8e8e6;
+        padding: 0 0 25px 0;
+        margin: 50px auto;
+        border-width: 1px 1px 4px 10px;
+        border-style: solid;
+        border-color: #781808;
+        position: relative;
+        display: block;
+      }
+      #maindiv .content::before {
+        content: counter(kman, lower-roman);
+        font-size: 100%;
+        font-weight: bold;
+        text-align: center;
+        color: #eee;
+        background-color: #781808;
+        width: 35px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        display: block;
+      }
+      h2 {
+        display: block;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        text-align: left;
+        text-indent: 30px;
+        padding: 0px;
+        margin: 20px 0 0 0;
+        border-bottom: dotted 2px #d0d0d0;
+        border-top: dotted 2px #d0d0d0;
+        background: #deded9;
+        font-size: 160%;
+      }
+      h2::first-letter {
+        color: #781808;
+        background-color: transparent;
+      }
+      #maindiv p {
+        font-size: 100%;
+        font-style: normal;
+        line-height: 150%;
+        padding: 0px;
+        margin: 10px auto;
+        width: 90%;
+        display: block;
+      }
+      #maindiv address a:link {
+        font-weight: bold;
+        text-decoration: underline;
+        background-color: transparent;
+        color: #eaeaea;
+        padding-right: 5px;
+        padding-left: 6px;
+      }
+      #maindiv address a:visited {
+        background-color: transparent;
+        color: #eaeaea;
+      }
+      #maindiv address a:focus,
+      #maindiv address a:hover {
+        text-decoration: none;
+        color: #F1F1F1;
+        border: 0;
+      }
+      #maindiv address a:active {
+        color: #fff;
+        text-decoration: line-through;
+        border: none;
+      }
+      #maindiv address {
+        font-size: 95%;
+        font-style: normal;
+        font-weight: bold;
+        text-decoration: none;
+        color: #BBB;
+        background-color: #781808;
+        padding: 3px 0px 0px;
+        margin: 0px;
+        width: 100%;
+        position: absolute;
+        bottom: -1px;
+        left: 0px;
+        display: block;
+        text-align: right;
+      }
+      #maindiv .important {
+        font-size: 95%;
+        font-family: Verdana, Tahoma, Arial, sans-serif;
+        text-align: left;
+        background-color: #F1F1F1;
+        border-top: solid 1px #aaa;
+        border-bottom: solid 1px #aaa;
+        border-left: solid 6px #aaa;
+        border-right: solid 6px #aaa;
+        padding: 10px;
+        margin: 20px auto;
+        width: 80%;
+        line-height: 160%;
+      }
+      #maindiv .important::before {
+        display: none;
+      }
+      #maindiv .important p {
+        font-size: 100%;
+        text-indent: 0px;
+        margin: 5px 0 10px 0;
+      }
+      #maindiv ul {
+        margin: -10px 0 0 30px;
+        margin-left: 35px;
+      }
+      #maindiv ol {
+        margin: -10px 0 0 35px;
+        margin-left: 40px;
+      }
+      #maindiv .important ul {
+        margin: -10px 0 0 15px;
+      }
+      #maindiv .important ol {
+        margin: -10px 0 0 20px;
+      }
+      #maindiv ul li {
+        list-style-type: square;
+        line-height: 150%;
+      }
+      #maindiv ol li {
+        line-height: 150%;
+      }
+      .t1 {
+        font-weight: bold;
+        width: 26%;
+        text-align: right;
+        clear: right;
+        float: left;
+        line-height: 22px;
+      }
+      .t2 {
+        text-align: left;
+        width: 73%;
+        float: right;
+        line-height: 22px;
+      }
+      hr {
+        margin: 10px 0 10px 0;
+        padding: 0;
+        height: 1px;
+        border: 0;
+        color: #aaa;
+        background-color: #aaa;
+      }
+      hr.floatfix {
+        clear: both;
+        color: #e8e8e6;
+        background-color: #e8e8e6;
+      }
+      h1 {
+        font-size: 225%;
+        color: #444;
+        padding: 5px 0 5px 0;
+        margin: 0;
+        width: 100%;
+      }
+      h3,
+      h4,
+      h5 {
+        margin: 10px 40px 10px 40px;
+        padding: 0;
+      }
+      h3 {
+        font-size: 125%;
+        font-style: italic;
+      }
+      h4 {
+        font-size: 125%;
+      }
+      h5 {
+        font-size: 100%;
+      }
+      h6 {
+        width: 100%;
+        margin: 10px 0 15px 0;
+        background-color: #ECECEC;
+        text-align: left;
+        text-indent: 30px;
+        font-size: 100%;
+        font-style: italic;
+        padding-top: 1px;
+        padding-bottom: 1px;
+        border-bottom: solid 1px #bbb;
+        border-top: solid 1px #bbb;
+      }
+      a:link {
+        color: #781808;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      a:visited {
+        color: #781808;
+      }
+      a:hover,
+      a:active {
+        color: #222;
+        border-bottom: 1px solid black;
+      }
+    </style>
+    <title>PS gui - Original Documentation</title>
+    <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAJkA////APz8/AD9/f0AJCSnABUVoQDw8PkA0tLtALe34gAPD58AgYHNAHh4yQAqKqoA8/P6ABsbpAAMDJ4AMzOtALS04QADA5oAycnpAPz8/gAYGKMAOTmwAM/P7ADV1e4A9vb7ANvb8QBOTrgAh4fPAFFRuQBXV7wAHh6lAGNjwQDMzOsAS0u3AKWl2wCQkNMAiorQAMPD5wCrq90AWlq9ABISoAC6uuMACQmdAMbG6ADY2O8A5+f1AGlpwwA2Nq8A4eHzAFRUuwBycscArq7fACEhpgAtLasAPDyxAGxsxAC+vuQA5OT0AEJCswCWltUAp6fbAMDA5gB1dcgAJyepAO3t+AD5+f0AU1O5AFlZvACvr98AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwEBAQgAAAAeJj4UDgwBAgMBAQEkAAAADy0GLg8FAQIDAQEBIhAfEgAAEAUAAA0CAwEBBjMHDTgMAAAVFgAhAgMBARgxCAcBCDcABBgAPAIDAQY6BAAOIiEIBQALKxYCAwENNgAQMABAEx8ACSQFOQMBJxwdBy8AAAsjNQARAQIDAQsHHCkdKiUEQgwACgECAwEoBAAAHgEBOyUAAAoBAgMZDgAAAAAgGg8AAAARAQIDGwAJAAAAAAAAAAAEGSwCPQUXFwkAAAAAAAAABBsaAkM0AQETFQAAAAAACQEBAQJEFAEBAUEKID8jMhIBAQECRQEBAQEBAQEBASYABgEBAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%3D">
+  </head>
+  <body>
+    <div id="wrap">
+      <div id="header">
+        <a id="top"></a>
+        <h1>Original Documentation</h1>
+        <strong>of the utilities</strong>
+        <hr>
+        <p class="menu">
+          <a href="#MVEJoiner">MVE Joiner</a> &middot;
+          <a href="#MVE2EXE">MVE 2 EXE</a> &middot;
+          <a href="#MVE2AVI">MVE 2 AVI</a> &middot;
+          <a href="#AVI2MVE">AVI 2 MVE</a> &middot;
+          <a href="#WAVC2WAV">WAVC 2 WAV</a> &middot;
+          <a href="#WAV2WAVC">WAV 2 WAVC</a> &middot;
+          <a href="#ACM2WAV">ACM 2 WAV</a> &middot;
+          <a href="#WAV2ACM">WAV 2 ACM</a> &middot;
+          <a href="#SoundComparator">Sound Comparator</a> &middot;
+          <a href="#WAV2OGG">WAV 2 OGG</a> &middot;
+          <a href="#OGG2WAV">OGG 2 WAV</a> &middot;
+          <a href="#OggInfo">Ogg Info</a> &middot;
+          <a href="#BMU2MP3">BMU 2 MP3</a> &middot;
+          <a href="#MP3Gain">MP3Gain</a> &middot;
+          <a href="#BMPPLT">BMP&lt;-&gt;PLT</a> &middot;
+          <a href="#TISTIZ">TIS&lt;-&gt;TIZ</a> &middot;
+          <a href="#TIS2BMP">TIS 2 BMP</a> &middot;
+          <a href="#MOS2BMP">MOS 2 BMP</a>
+        </p>
+      </div>
+      <div id="maindiv">
+
+        <!-- ================== M V E  J O I N E R ================== -->
+        <a id="MVEJoiner"></a>
+        <div class="content">
+          <h2>MVE Joiner</h2>
+          <p><strong>MVE Joiner</strong> combines two MVE movies into one.  The audio and video formats of input MVEs are not required to be the same.  You can glue together 8-bit and 16-bit movies, silent or with sound track, movies with different sizes.</p>
+          <p><strong>Please note</strong> that this feature is a kind of hack in MVE format, and it will not necessarily work for your game.</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://return0.pisem.net/graph.html#mve_join">here</a> and <a href="http://teamx.ru/taxonomy/term/39">here</a>.</strong></p>
+          <address>
+            <span class="footer">Original Documentation &gt; MVE Joiner</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== M V E  2  E X E ================== -->
+        <a id="MVE2EXE"></a>
+        <div class="content">
+          <h2>MVE 2 EXE</h2>
+          <h4>mve-play.txt</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+Turning .mve movie files into self-running movies.
+
+1) Extract .mve file(s) from master.dat using your favorite .dat file unpacker (I recommend DAT Explorer by Dims).
+
+2) Copy the supplied w32stub.lib to the directory containing your .mve file(s).
+
+3) Open a DOS window or start any file manager that has a command line prompt.
+To open a DOS window in Windows 2000/XP, click the START button and navigate to All Programs -&gt; Accessories -&gt; Command Prompt.
+As far as Windows9x is concerned, I stopped using it a couple of years ago, but still remember that the shortcut to DOS window is out there somewhere under the START button. :)
+
+4) Once you open the DOS window, use the drive letter command if necessary to change the current drive and the cd command to navigate to the directory where you have unpacked the .mve file(s) and the w32stub.lib.
+Example:
+C:\WINDOWS&gt; d:
+D:&gt; cd fallout\mve\
+
+5) Type the DOS copy command with the /b switch to join the player stub and the .mve file.
+Syntax: copy /b w32stub.lib + &lt;.mve file name&gt;.mve &lt;resulting file name&gt;.exe
+Example:
+D:\FALLOUT\MVE&gt; copy /b w32stub.lib + intro.mve intro.exe
+
+6) Run the .exe file and enjoy the show. :)
+ If you like it so much that you want it played in an endless loop, then run it from the command line with the "-l" switch or create the appropriate shortcut.
+ Example:    intro.exe -l
+
+===============
+
+.MVE player
+copyright (c) Interplay Productions
+http://www.interplay.com
+appears courtesy of Heiko Herrmann alias HH-Software Images from the Descent Network Team
+http://www.descent-freespace.com/descman
+
+Packaged by Maxxim [maxxim@fallout.ru]
+for Russian Fallout CRPG fans at http://www.fallout.ru
+January 24, 2000
+
+Instruction file updated April 27, 2003
+            </pre>
+          </div>
+          <h4>MVE2EXE.txt</h4>
+          <div class="important">
+            <pre style="white-space:pre-wrap;">
+MVE2EXE v1.0 by Perceptron (www.fallout.ru, www.teamx.ru).
+
+Предназначена для конвертации файлов .mve (мульты из Fallout2) в исполняемые .exe.
+
+Использовать строго вместе с файлом w32stub.lib, откопанным Maxxim'ом.
+(http://www.teamx.ru/utils/mve-play.zip)
+Требует библиотеки MFC42.dll (из поставки Visual C++ 6.0).
+
+Распаковать в папку с .mve файлами (и файлом w32stub.lib) и запустить.
+            </pre>
+          </div>
+          <p><strong>This utility can be downloaded <a href="http://perceptron.fatal.ru/utils.html#video">here</a> and <a href="http://teamx.ru/taxonomy/term/39">here</a>.</strong></p>
+          <address>
+            <span class="footer">Original Documentation &gt; MVE 2 EXE</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== M V E  2  A V I ================== -->
+        <a id="MVE2AVI"></a>
+        <div class="content">
+          <h2>MVE 2 AVI</h2>
+          <h4>readme.txt (<em>mve2avi2.31</em>)</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+ Mve2Avi, version 2.31                                  Date: 13.10.2002
+   (c) **** [*****]
+======================
+
+0. Warning.
+-----------
+This package is based on Interplay Movie Player utility (pm.exe) which is property of Interplay. Distribution of this package as well as its using is illegal.
+
+
+1. What is this.
+----------------
+This program converts video files form MVE to AVI format. MVEs (or Interplay Movies) are used in such Interplay's games as Descent 2 and 3, MDK, Fallout 1 and 2, Icewind Dale, Planescape: Torment, Baldur's Gate, Klingon Academy, and others.
+
+
+2. Usage.
+---------
+There are several command line parameters, but they are optional. You can just type
+   pm23.exe MVE_file_path
+from your command line, and the specified file will be converted to AVI with same name (and .AVI extension) in the current directory.
+
+The output AVI-file name can also be provided:
+   pm23.exe MVE_file_path AVI_file_path
+The same path will be used to store parts of movie, in frame-saving and splitting modes (modes are discussed below).
+
+
+3. Command line options and program modes.
+------------------------------------------
+Available options are:
+
+-bmp or -gif	Turns frame-saving mode on. The frames in this mode are
+	saved in separate files (in BMP or GIF format), instead of AVI.
+	Directory with name of input movie and '.bmps' or '.gifs' extension
+	is created, frames are saved in this directory under 00\0000.???,
+	00\0001.???, ... 00\00FF.???, 01\0100.???, 01\0101.??? ... names.
+	In general, image name is base-16 frame number (to make decimal
+	numeration of frames, specify '-dec' command line option). The
+	images are placed in subdirectories, which are corresponding to
+	image names. To eliminate these '00', '01' and other subdirs, just
+	add '-nodirs' command line option.
+	Sound track in this mode is saved in separate WAV-file with '.wav'
+	extension.
+
+-split		Use this parameter, if your video-editor cannot load
+	8 bits per pixel AVIs with variable palette (an example of such
+	editor is VirtualDub, version 1.4.7). In splitting mode, the
+	movie is devided into several parts with constant palette in each
+	part. All the parts have the same names as input movie plus the
+	part number. Sound track is saved in WAV-file.
+
+-nosave		Turns off the capturing. Use to play the movie.
+-log		Enables debug information logging into mve2avi.log file.
+
+By default program makes AVI file with 15 frames per second, but some MVE-movies (in Klingon Academy, for example) are 30fps movies. So, the program tries to autodetect video-rate. If the autodetection fails or mistakes, you can use '-30' option to force 30fps AVI saving.
+
+
+Some command line examples:
+   pm23.exe intro.mve
+   pm23.exe tanker.mve c:\Movies\Tanker.avi -split
+   pm23.exe walkm.mve -gif -dec
+
+
+5. Credits.
+-----------
+The author is grateful to Alexey Vedernikov, Eugene Salagaev, Sergei Kovalenko and John Addison for tesing, bug-reports and useful comments.
+
+
+4. Contact information.
+-----------------------
+1) Post a message to 'TeamX' forum of www.fallout.ru site.
+2) E-mail to return0@pisem.net or return0@students.ru
+            </pre>
+          </div>
+	      <h4>readme.txt (<em>mve2avi2.4h</em>)</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+ Mve2Avi, version 2.4 (HiColor revision)                 Date: 13 Apr 2003
+   (c) **** [*****]
+======================
+
+0. Warning.
+-----------
+This package is based on Interplay Movie Player utility (wmplay.exe) which is property of Interplay. You may use it for evaluation only.
+
+
+1. What is this.
+----------------
+This program converts video files form MVE to AVI format. MVEs (or Interplay Movies) are used in such Interplay's games as Descent 2 and 3, MDK, Fallout 1 and 2, Icewind Dale, Planescape: Torment, Baldur's Gate, Klingon Academy, and others.
+
+
+2. Features.
+------------
+There are two branches of the converter - 8bit and 16bit (this revision). 8bit package cannot handle new HiColor movies, which are used for example in Freespace game. And 16bit version degrades quality of 8bit MVEs.
+
+
+3. Usage.
+---------
+There are several command line parameters, but they are optional. You can just type
+   fsp.exe MVE_file_path
+from your command line, and the specified file will be converted to AVI with same name (and .AVI extension) in the current directory.
+
+The output AVI-file name can also be provided:
+   fsp.exe MVE_file_path AVI_file_path
+The same path will be used to store parts of movie, in frame-saving and splitting modes (modes are discussed below).
+
+
+4. Command line options and program modes.
+------------------------------------------
+Available options are:
+
+-bmp	Turns frame-saving mode on. The frames in this mode are
+	saved in separate files in BMP format instead of AVI.
+	Directory with name of input movie and '.bmps' extension is created,
+	frames are saved in this directory under 00\0000.bmp,
+	00\0001.bmp, ... 00\00FF.bmp, 01\0100.bmp, 01\0101.bmp ... names.
+	In general, image name is base-16 frame number (to make decimal
+	numeration of frames, specify '-dec' command line option). The
+	images are placed in subdirectories, which are corresponding to
+	image names. To eliminate these '00', '01' and other subdirs, just
+	add '-nodirs' command line option.
+	Sound track in this mode is saved in separate WAV-file with '.wav'
+	extension.
+
+-nosave	Turns off the capturing. Use to play the movie.
+-log	Enables debug information logging into mve2avi.log file.
+
+By default program makes AVI file with 15 frames per second, but some MVE-movies (in Klingon Academy, for example) are 30fps movies. So, the program tries to autodetect video-rate. If the autodetection fails or mistakes, you can use '-30' option to force 30fps AVI saving.
+
+
+Some command line examples:
+   fsp.exe intro.mve
+   fsp.exe tanker.mve c:\Movies\Tanker.avi
+   fsp.exe walkm.mve -bmp -dec
+
+
+5. Credits.
+-----------
+The author is grateful to Alexey Vedernikov, Eugene Salagaev, Sergei Kovalenko, John Addison and Nexus for tesing, bug-reports and useful comments.
+
+
+6. Contact information.
+-----------------------
+1) Post a message to forum of www.teamx.ru site
+2) E-mail to return0@pisem.net
+            </pre>
+          </div>
+	      <h4>history.txt</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+	Mve2Avi program modification history
+
+[           Legend:           ]
+[ + Added feature             ]
+[ * Improved/changed feature  ]
+[ - Bug fixed/removed feature ]
+
+2.4H	13 Apr 2003
+	[*] Separate, 16bit version of converter, based on Freespace trailer-player
+	[*] FPS-autodetection should work with any movies
+	[-] Fixed: -30 option was overrided by fps-autodetection
+	[-] GIF saving removed
+2.3.1	13 Oct 2002
+	[-] Fixed leaks of stack in gifsave.dll
+2.3	08 Mar 2002
+	[+] FPS autodetection added
+	[*] Directory naming changed in -bmp and -gif modes
+2.2.2	05 Mar 2002
+	[-] Fixed buffer-overflow in -bmp mode
+	[+] -30 option added (Klingon Academy MVEs are 30fps)
+	[*] Some minor changes, optimizations and bugfixes
+	[+] Modification log (this file) started after ten months of development ;)
+2.2.1	02 Mar 2002
+	[*] Size of images in -bmp and -gif modes is reduced to actual frame size (instead of full-screen saving)
+2.2	19 Feb 2002
+	[*] Sequence of tracks in AVI is changed (some players could not calculate movie speed correctly)
+	[+] Added -split mode (VirtualDub could not load 8bpp AVIs with variable palette)
+2.1	08 Nov 2001
+	[+] Sound track capturing is back
+	[*] Sound and video processing DLLs are joined together
+2.0	07 Nov 2001
+	[+] Saving to AVI movie
+	[*] Project name is changed to Mve2Avi
+	[-] Sound capturing is removed
+	[*] Command line options are prefixed with '-'
+1.1	12 Jun 2001
+	[+] Added decimal numeration of frames
+1.0	19 May 2001
+	First alpha version of MVECapt
+            </pre>
+          </div>
+          <p><strong>This utility can be downloaded <a href="http://return0.pisem.net/graph.html#mve_join">here</a> and <a href="http://teamx.ru/taxonomy/term/39">here</a> and <a href="http://perceptron.fatal.ru/utils.html#video">here</a>.</strong></p>
+            <address>
+              <span class="footer">Original Documentation &gt; MVE 2 AVI</span> &#8226;<a href="#top">Back To Top</a>
+            </address>
+          </div>
+
+        <!-- ================== A V I  2  M V E ================== -->
+        <a id="AVI2MVE"></a>
+        <div class="content">
+          <h2>AVI 2 MVE</h2>
+          <h4>AVI to Interplay MVE converter</h4>
+          <p><strong>AVI2MVE</strong> is a converter from AVI video files to Interplay MVE format. This format is wildely used in Interplay's games (Descent, MDK, Fallout, Baldur's Gate and many others). Detailed documentation and a change-log can be found <a href="https://web.archive.org/web/20150508034100/http://return0.pisem.net/avi2mve.html">here</a>.</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://teamx.ru/taxonomy/term/39">here</a> and <a href="http://perceptron.fatal.ru/utils.html#video">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; AVI 2 MVE</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+        
+        <!-- ================== W A V C  2  W A V ================== -->
+        <a id="WAVC2WAV"></a>
+        <div class="content">
+          <h2>WAVC 2 WAV</h2>
+          <h4>WAVC.txt</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+WAVC2WAV Converter v1.0.0
+
+Written By:  Edwin Steiner
+
+====================================================================
+Vist the TeamBG web site at:
+
+http://www.bgrealms.com/teambg/
+http://www.geocities.com/TimesSquare/Arena/2460/bgate02.html
+====================================================================
+
+**IMPORTANT**
+
+The file "wavc.exe" is the actual converter that has two command line parameters:
+
+wavc.exe [source file] [output file]
+
+To use the converter you must either use the "wavc.exe" file at a DOS command prompt or use the enclosed ACM-WAVC.EXE file.
+
+====================================================================
+kenbaker@teambg.zzn.com
+====================================================================
+            </pre>
+          </div>
+	      <p><strong>This utility can be downloaded <a href="http://www.bootstrike.com/Torment/files.html">here</a>.</strong></p>
+          <address>
+            <span class="footer">Original Documentation &gt; WAVC 2 WAV</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== W A V   2   W A V C ================== -->
+        <a id="WAV2WAVC"></a>
+        <div class="content">
+          <h2>WAV 2 WAVC</h2>
+	      <p>This utility is integrated into PS gui.exe as of v3.00 and is Copyright &copy; 2009 Sam Schmitz along with the rest of the GUI.  Please see the <a href="https://www.gnu.org/copyleft/gpl.html">GNU General Public License</a> for copyright information.</p>
+          <address>
+            <span class="footer">Original Documentation &gt; WAV 2 WAVC</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== A C M   2   W A V ================== -->
+        <a id="ACM2WAV"></a>
+        <div class="content">
+          <h2>ACM 2 WAV</h2>
+          <h4>readme.txt</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+ Interplay ACM to WAV converter v1.32
+     (c) 1999-2003 ABel [TeamX]
+======================================
+
+ Description
+-------------
+This program converts Interplay ACM sound files to waveform-audio format (WAV).
+
+
+ What's new
+------------
+Version 1.32, 15 Sep 2003:
+   [+] Support of ACMs from RUS localization.
+
+Version 1.31, 21 Aug 2003:
+   [+] Added decompression of Levcorp's variation of ACM.
+
+Version 1.3, 13 Mar 2003:
+   [+] Processing of SFAD variation of ACM format (Starfleet Academy).
+
+
+ Contacts
+----------
+Please, report bugs and features to abel@krasu.ru or return0@pisem.net
+Comments and suggestions on improvement are always welcome.
+            </pre>
+          </div>
+          <p><strong>This utility can be downloaded <a href="http://return0.pisem.net/audio.html#acm2wav">here</a> and <a href="http://perceptron.fatal.ru/utils.html">here</a>.</strong></p>
+          <address>
+            <span class="footer">Original Documentation &gt; ACM 2 WAV</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== W A V   2   A C M ================== -->
+        <a id="WAV2ACM"></a>
+        <div class="content">
+          <h2>WAV 2 ACM</h2>
+          <h4>FILE_ID.DIZ</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+ Sound File to Interplay ACM Converter v1.0 beta
+           (c) 2000-2001 ABel [TeamX]
+=================================================
+
+snd2acm.exe converts sound file to ACM.
+compare.exe compares two sound files (RMSE is calculated).
+
+Supported input formats:
+  RAW PCM    8 and 16 bits,
+  WAV PCM    8 and 16 bits,
+  Interplay ACM.
+
+Note: no up- or down-sampling is provided, so make sure that input file is 22050Hz.
+
+WARNING: These programs can be used for entertainment and evaluation only. Neither this software nor any files and intermediate date produced by this software can be used for making money (in any sense of 'making' and in any sense of 'money' :)
+
+The author does not take any responsibility for misuse of these programs or the damage resulted from such misuse.
+
+ACM format is property of Interplay.
+
+Please, email bugs/features/comments/suggestions to a234238@chat.ru
+            </pre>
+          </div>
+          <p><strong>This utility can be downloaded <a href="http://return0.pisem.net/audio.html#snd2acm">here</a> and <a href="http://perceptron.fatal.ru/utils.html">here</a> and <a href="http://teamx.ru/taxonomy/term/40">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; WAV 2 ACM</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== S o u n d   C o m p a r a t o r ================== -->
+        <a id="SoundComparator"></a>
+        <div class="content">
+          <h2>Sound Comparator</h2>
+          <h4>FILE_ID.DIZ + COMPARE.EXE</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+ Sound signal comparator v1.0 beta
+           (c) 2000-2001 ABel [TeamX]
+=================================================
+
+compare.exe compares two sound files (RMSE is calculated).
+
+Compare trys to open a file as WAV, then as ACM, and finally as RAW16.
+
+WARNING: These programs can be used for entertainment and evaluation only. Neither this software nor any files and intermediate date produced by this software can be used for making money (in any sense of 'making' and in any sense of 'money' :)
+
+The author does not take any responsibility for misuse of these programs or the damage resulted from such misuse.
+
+ACM format is property of Interplay.
+
+Please, email bugs/features/comments/suggestions to a234238@chat.ru
+            </pre>
+          </div>
+          <p><strong>This utility can be downloaded <a href="http://return0.pisem.net/audio.html#snd2acm">here</a> and <a href="http://perceptron.fatal.ru/utils.html">here</a> and <a href="http://teamx.ru/taxonomy/term/40">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; Sound Comparator</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== W A V   2   O G G ================== -->
+        <a id="WAV2OGG"></a>
+        <div class="content">
+          <h2>WAV 2 Ogg</h2>
+          <p><strong>OggEnc v2.87 (libvorbis 1.3.1)</strong></p>
+          <p>(c) 2000-2005 Michael Smith &lt;msmith@xiph.org&gt; &amp; portions by John Edwards &lt;john.edwards33@ntlworld.com&gt;</p>
+          <br>
+          <p>INPUT FILES:</p>
+          <p>OggEnc input files must currently be 32, 24, 16, or 8 bit PCM WAV, AIFF, or AIFF/C files, or 32 bit IEEE floating point WAV. Files may be mono or stereo (or more channels) and any sample rate.</p>
+          <p>ALSO with this version, you may input FLAC, MONKEYS AUDIO, WAVPACK, LAPC, OPTIMFROG and SHORTEN files. You MUST ensure that the appropriate encoder/decoder (i.e., flac.exe, etc) is in the same dir/folder as oggenc2.exe, or is in the defined path.</p>
+          <p>Alternatively, the --raw option may be used to use a raw PCM data file, which must be 16bit stereo little-endian PCM ('headerless wav'), unless additional parameters for raw mode are specified.</p>
+          <p>You can specify taking the file from stdin by using - as the input filename. In this mode, output is to stdout unless an output filename is specified with -o</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://www.rarewares.org/ogg-oggenc.php">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; WAV 2 Ogg</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== O G G  2  W A V ================== -->
+        <a id="OGG2WAV"></a>
+        <div class="content">
+          <h2>Ogg 2 WAV</h2>
+          <p><strong>OggDec v1.97 (libvorbis 1.3.1)</strong></p>
+          <p>Copyright (c) 2002-2010 John Edwards</p>
+          <br>
+          <p>INPUT FILES</p>
+          <p>OggDec input files must be Ogg Vorbis I files with a sample rate of 48000Hz, 44100Hz, 32000Hz, 24000Hz, 22050Hz, 16000Hz, 12000Hz, 11025Hz or 8000Hz.</p>
+          <p>Wildcards (?, *) can be used in the filename.</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://www.rarewares.org/ogg-oggdec.php">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; Ogg 2 WAV</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== O g g   I n f o ================== -->
+        <a id="OggInfo"></a>
+        <div class="content">
+          <h2>Ogg Info</h2>
+          <p><strong>OggInfo from vorbis-tools 1.2.0</strong></p>
+          <p>by the Xiph.Org Foundation (http://www.xiph.org/)</p>
+          <br>
+          <p>(c) 2003-2005 Michael Smith &lt;msmith@xiph.org&gt;</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://www.rarewares.org/ogg-tools.php">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; Ogg Info</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== B M U  2  M P 3 ================== -->
+        <a id="BMU2MP3"></a>
+        <div class="content">
+          <h2>BMU 2 MP3</h2>
+          <p>This utility is integrated into PS gui.exe as of v3.02 and is Copyright &copy; 2009 Sam Schmitz along with the rest of the GUI.  Please see the <a href="https://www.gnu.org/copyleft/gpl.html">GNU General Public License</a> for copyright information.</p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; BMU 2 MP3</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== M P 3 G a i n ================== -->
+        <a id="MP3Gain"></a>
+        <div class="content">
+          <h2>MP3Gain</h2>
+          <p><strong>mp3gain.exe version 1.5.1</strong></p>
+          <p>copyright(c) 2001-2009 by Glen Sawyer</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://mp3gain.sourceforge.net/download.php">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; MP3Gain</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== B M P < - > P L T ================== -->
+        <a id="BMPPLT"></a>
+        <div class="content">
+          <h2>BMP&lt;-&gt;PLT</h2>
+          <p><strong>BMP&lt;-&gt;PLT converter programs  Written By:  WizWom</strong></p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://www.wizwom.is-a-geek.net/BGMods/">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; BMP&lt;-&gt;PLT</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== T I S < - > T I Z ================== -->
+        <a id="TISTIZ"></a>
+        <div class="content">
+          <h2>TIS&lt;-&gt;TIZ</h2>
+	  <h4>readme.txt</h4>
+          <div class="important" style="height:240px; overflow-y:scroll;">
+            <pre style="white-space:pre-wrap;">
+TisPack v0.91
+-------------
+
+TisPack is a tileset compressor for Infinity Engine games (like Baldur's Gate, Icewind Dale, and Planescape Torment). The engine's native format for tiled bitmaps is the uncompressed, 8-bit TIS format. TisPack converts TIS files into compressed TIZ files, compressing them down to about 7-35% depending on the content. The TIZ unpacker is then shipped together with the TIZ files, and the TIS files are unpacked during installation.
+
+This utility is aimed at mod authors who wish to add new areas in their mods, without having stupidly large downloads.
+
+
+Contents
+--------
+
+readme.txt		This file.
+manual.html		The manual.
+tizformat.html		A description of the TIZ file format.
+tispack.exe		TIS -&gt; TIZ packer.
+tisunpack.exe		TIZ -&gt; TIS unpacker.
+source/*		Source code.
+
+
+Contact
+-------
+
+I wrote this utility for Jason Compton, jcompton@xnet.com. If you have any questions regarding usage, modding, or anything else regarding the games, please contact him -- I don't even own any of these games. If you have found bugs or wish to submit improvements to the code, you can contact me, Per Olofsson, at MagerValp@cling.gu.se.
+
+
+License
+-------
+
+/* TisPack, a tileset compression utility
+  version 0.91, 2004-05-14
+
+  Copyright (C) 2004 Per Olofsson
+
+  This software is provided 'as-is', without any express or implied warranty.  In no event will the author be held liable for any damages arising from the use of this software.
+
+  Permission is granted to anyone to use this software for any purpose, including commercial applications, and to alter it and redistribute it freely, subject to the following restrictions:
+
+  1. The origin of this software must not be misrepresented; you must not claim that you wrote the original software. If you use this software in a product, an acknowledgment in the product documentation would be appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
+
+  Per Olofsson (MagerValp@cling.gu.se)
+
+*/
+            </pre>
+          </div>
+          <p>Additional documentation on usage and the TIZ format can be found in the original download package linked to below.</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://www.pocketplane.net/mambo/index.php?option=content&amp;task=blogcategory&amp;id=137&amp;Itemid=96">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; TIS&lt;-&gt;TIZ</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== T I S < - > B M P ================== -->
+        <a id="TIS2BMP"></a>
+        <div class="content">
+          <h2>TIS 2 BMP</h2>
+          <p><strong>Tis2Bmp v1.0 by Theo de Moree</strong></p>
+          <p>Usage: tis2bmp &lt;tisfile&gt; &lt;width in blocks&gt; &lt;height in blocks&gt;</p>
+          <p>Note: one block consists of 64*64 pixels</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://www.gameapps.com/tis2bmp.htm">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; TIS 2 BMP</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+        <!-- ================== M O S < - > B M P ================== -->
+        <a id="MOS2BMP"></a>
+        <div class="content">
+          <h2>MOS 2 BMP</h2>
+          <p><strong>Mos2Bmp v1.0 by Theo de Moree</strong></p>
+          <p>Usage: mos2bmp &lt;mosfile&gt;</p>
+          <br>
+          <p><strong>This utility can be downloaded <a href="http://www.gameapps.com/mos2bmp.htm">here</a>.</strong></p>
+          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <address>
+            <span class="footer">Original Documentation &gt; MOS 2 BMP</span> &#8226;<a href="#top">Back To Top</a>
+          </address>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
