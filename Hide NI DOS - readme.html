@@ -257,7 +257,7 @@
         border-bottom: 1px solid black;
       }
     </style>
-    <title>Hide NI DOS - readme</title>
+    <title>Hide NI DOS - ReadMe</title>
     <link rel="icon" href="data:image/vnd.microsoft.icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAJkA////APz8/AD9/f0AJCSnABUVoQDw8PkA0tLtALe34gAPD58AgYHNAHh4yQAqKqoA8/P6ABsbpAAMDJ4AMzOtALS04QADA5oAycnpAPz8/gAYGKMAOTmwAM/P7ADV1e4A9vb7ANvb8QBOTrgAh4fPAFFRuQBXV7wAHh6lAGNjwQDMzOsAS0u3AKWl2wCQkNMAiorQAMPD5wCrq90AWlq9ABISoAC6uuMACQmdAMbG6ADY2O8A5+f1AGlpwwA2Nq8A4eHzAFRUuwBycscArq7fACEhpgAtLasAPDyxAGxsxAC+vuQA5OT0AEJCswCWltUAp6fbAMDA5gB1dcgAJyepAO3t+AD5+f0AU1O5AFlZvACvr98AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwEBAQgAAAAeJj4UDgwBAgMBAQEkAAAADy0GLg8FAQIDAQEBIhAfEgAAEAUAAA0CAwEBBjMHDTgMAAAVFgAhAgMBARgxCAcBCDcABBgAPAIDAQY6BAAOIiEIBQALKxYCAwENNgAQMABAEx8ACSQFOQMBJxwdBy8AAAsjNQARAQIDAQsHHCkdKiUEQgwACgECAwEoBAAAHgEBOyUAAAoBAgMZDgAAAAAgGg8AAAARAQIDGwAJAAAAAAAAAAAEGSwCPQUXFwkAAAAAAAAABBsaAkM0AQETFQAAAAAACQEBAQJEFAEBAUEKID8jMhIBAQECRQEBAQEBAQEBASYABgEBAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA%3D">
   </head>
   <body>
@@ -268,11 +268,12 @@
         <strong>Quietly runs NearInfinity with the specified VM Options.</strong>
         <hr>
         <p class="about">
-          Author: <a href="http://www.shsforums.net/user/10485-sam/">Sam.</a>
+          Author: <a href="http://www.shsforums.net/user/10485-sam/">Sam Schmitz</a>
         </p>
         <p class="about">
-          <a href="http://www.shsforums.net/topic/45358-nearinfinity/">Mod Forum</a> &#8226;
-          Version: 1.03
+          <a href="http://www.shsforums.net/topic/45358-nearinfinity/">Forum</a> &#8226;
+          <a href="https://github.com/Sampsca/Hide-NI-DOS">GitHub</a> &#8226;
+          Version 2.0.0.0
         </p>
         <hr>
         <p class="menu">
@@ -289,19 +290,9 @@
         <a id="intro"></a>
         <div class="content">
           <h2>Introduction</h2>
-          <p>This program quietly runs NearInfinity with the specified VM / HotSpot Options.  It currently provides the option to:</p>
-          <br>
-          <ul>
-            <li>Specify initial size of memory allocation pool.</li>
-            <li>Specify max size of memory allocation pool.</li>
-            <li>Specify initial size of permanent generation memory.</li>
-            <li>Specify max size of permanent generation memory.</li>
-            <li>Specify initial size of new generation memory.</li>
-            <li>Specify max size of new generation memory.</li>
-            <li>Specify additional custom parameters.</li>
-          </ul>
-          <br>
-          <p>This is a beta release, and as such, may be buggy.  I am, however, prepared to make every effort to correct any errors or problems that you encounter with this program.  If there are other command-line arguments you would like this utility to support (like a non-standard garbage collector or something), please let me know and I'll add them.  As of version 1.02, custom command-line arguments can be added by manually editing the "Custom" key in "Hide NI DOS Config.txt".  The contents of the key should be exactly how the argument would be used in a batch file e.g. "-Xms512m" (without the quotes).  This utility was built using the AutoHotkey scripting language, and as such will perform best on newer Windows operating systems.  It has been optimized for Windows XP.  Enjoy :-) !</p>
+          <p><a href="https://github.com/Argent77/NearInfinity/">NearInfinity</a> (NI for short) is an Infinity Engine browser and editor.  You can read more about it on the <a href="https://github.com/NearInfinityBrowser/NearInfinity/wiki">NearInfinity Wiki</a>.</p>
+          <p>Hide NI DOS is a program that quietly runs NearInfinity with the specified Java Virtual Machine (VM) options, which may be necessary if NI runs out of memory.  Hide NI DOS also provides a graphical user interface (GUI) for NearInfinity’s optional command-line parameters.  You can read more about the various options and parameters <a href="https://github.com/NearInfinityBrowser/NearInfinity/wiki/FAQ-and-Troubleshooting">here</a>.</p>
+          <p>This utility was built using the <a href="https://www.autohotkey.com/">AutoHotkey</a> scripting language, and as such will perform best on newer Windows operating systems.  It has been optimized for Windows 10.</p>
           <address>
             <span class="footer">Hide NI DOS &gt; Introduction</span> &#8226;<a href="#top">Back To Top</a>
           </address>
@@ -311,9 +302,19 @@
         <a id="installation"></a>
         <div class="content">
           <h2>Installation</h2>
-          <p>Installation is very simple:  just extract the contents of the .RAR archive into any directory and run "Hide NI DOS.exe".  You have two options for setting the VM Options:  you can either edit "\Hide NI DOS (files)\Hide NI DOS Config.txt" yourself, or you can use the program's built-in GUI.<br><br>If you choose to edit the Config file manually, then you can specify the size, in bytes, of the different memory allocation options.  This value must be a multiple of 1024 greater than the minimum number of MB allowed for that option (usually 1 or 2).  Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes.  If you do not want the utility to use a particular VM Option, then leave the value for that key blank.<br><br>On the other hand, to access the Config GUI, run Hide NI DOS.exe with the "-config" parameter.  In other words, save "Hide NI DOS.exe" -config to a .BAT file and run it.  The values set by the GUI are in megabytes.  Uncheck a parameter to disable it.  The "default" values are the ones I use and recommend for anyone with a 32-bit system and around 2 or more gigs of RAM.</p>
+          <p>Installation is very simple: just extract the contents of the archive (including relative paths) into any directory and run "Hide NI DOS.exe".</p>
+          <p>The first time you run the program, the Configuration GUI will be displayed with some reasonable defaults already selected.  Set the various options as desired, and make sure to select the full path to the NearInfinity.jar file you wish the program to quietly run in the future.  When ready, you can select "Run" to run NI with the selected options but leave the Configuration GUI open, or you can select "OK" to save your selections and close the GUI.  Subsequently running Hide NI DOS will run NI with the options you saved without displaying the Configuration GUI.</p>
+          <p>To reopen the Configuration GUI again later, run Hide NI DOS.exe with the "-Config" parameter. In other words, save </p>
+          <div class="important">
+            <p>"Hide NI DOS.exe" -Config</p>
+          </div>
+          <p>to a .BAT file and run it.  Similarly, you may also run</p>
+          <div class="important">
+            <p>"Hide NI DOS.exe" -About</p>
+          </div>
+          <p>to view an About dialog with copyright information.  Both such Windows Batch (.BAT) files have already been set up for you.</p>
           <address>
-            <span class="footer">Hide NI DOS &gt; Installation</span> &#8226;<a href="#top">Back To Top</a>
+            <span class="footer">Hide NI DOS &gt; Installation</span> <a href="#top">Back To Top</a>
           </address>
         </div>
 
@@ -321,7 +322,7 @@
         <a id="faq"></a>
         <div class="content">
           <h2>Frequently Asked Questions</h2>
-          <p><strong>Q: Why is this program needed?</strong><br>A: Basically, the default memory allocation settings (which are platform-dependent) are just not high enough.  NearInfinity can run out of memory if used for long periods of time, causing it to freeze or give OutOfMemory errors.  The best way to counteract this is to allocate more memory for NI to use at runtime.   Hide NI DOS is better than commonly distributed .BAT files because it makes it easy to adjust more than just the maximum size of the memory allocation pool.  More importantly, it hides the command prompt window through which NI is run.</p>
+          <p><strong>Q: Why is this program needed?</strong><br />A: Basically, the default memory allocation settings (which are platform-dependent) are just not high enough, especially when using a 32-bit version of Java.  NearInfinity can run out of memory if used for long periods of time, causing it to freeze or give OutOfMemory errors.  The best way to counteract this is to allocate more memory for NI to use at runtime.   Hide NI DOS is better than commonly distributed .BAT files because it makes it easy to adjust more than just the maximum size of the memory allocation pool.  More importantly, it hides the command prompt window through which NI is run.</p>
           <address>
             <span class="footer">Hide NI DOS &gt; FAQ</span> &#8226;<a href="#top">Back To Top</a>
           </address>
@@ -331,12 +332,12 @@
         <a id="credits"></a>
         <div class="content">
           <h2>Credits</h2>
-          <p>Thanks to all the people who contributed to the NearInfinity project over the years.  Your contributions are very much appreciated by the Infinity Engine Modding Community.
-          <br>
-          <br>
-          Thanks to ScuD for <a href="http://forums.pocketplane.net/index.php/topic,26831.msg322159.html#msg322159">telling me</a> which command-line arguments he uses when running NearInfinity.  I now use the very same ones every time I run NI, and they are the default values used by Hide NI DOS.<br><br>Thanks to corrupt for his <a href="https://autohotkey.com/board/topic/7874-cmdret-ahk-functions/">CMDret-AHK functions</a>.<br><br>To view the "About" dialog, run Hide NI DOS.exe with the "-about" parameter.  In other words, save "Hide NI DOS.exe" -about to a .BAT file and run it.
-          </p>
-          <hr class="floatfix" /><!-- Don't remove the <hr> unless you have text following the last "t2" in this <div>! -->
+          <p></p>
+          <ul>
+            <li>Thanks to all the people who contributed to the NearInfinity project over the years.  Your contributions are very much appreciated by the Infinity Engine Modding Community.</li>
+            <li>Thanks to ScuD for originally <a href="https://forums.pocketplane.net/index.php/topic,26831.msg322159.html#msg322159">telling me</a> which command-line arguments he uses when running NearInfinity.</li>
+            <li>To view the "About" dialog, run Hide NI DOS.exe with the "-About" parameter.</li>
+          </ul>
           <address>
             <span class="footer">Hide NI DOS &gt; Credits</span> &#8226;<a href="#top">Back To Top</a>
           </address>
@@ -346,27 +347,32 @@
         <a id="version"></a>
         <div class="content">
           <h2>Version history</h2>
-          <h6>12 January 2012 - Version 1.03:</h6>
+          <h6>22 July 2010 - Version 1.00:</h6>
           <ul>
-            <li>Fixed a bug where the Hide NI DOS process did not close when the NearInfinity window was closed.</li>
-            <li>Replaced corrupt's "CMDret_Stream" function with his "CMDret_RunReturn" function, as it is more appropriate and likely performs better in this situation.</li>
-            <li>Greatly improved logging.  The output should actually be readable now :-) .  It is still disabled by default.</li>
-            <li>Many other minor code improvements.</li>
+            <li>Initial release</li>
+          </ul>
+          <h6>28 July 2010 - Version 1.01:</h6>
+          <ul>
+            <li>Added option to config to create a shortcut on the current user’s desktop.</li>
           </ul>
           <h6>15 September 2011 - Version 1.02:</h6>
           <ul>
-            <li>Replaced writing, running, and hiding .BAT files with corrupt's CMDret function.</li>
+            <li>Replaced writing, running, and hiding .BAT files with corrupt’s CMDret function.</li>
             <li>Fixed input parameters so that "-about" and "-config" can be used at the same time.</li>
             <li>Added option to enable logging of console output (disabled by default).</li>
             <li>Added support for specifying additional custom parameters.  See <a href="#intro">Introduction</a>.</li>
           </ul>
-          <h6>28 July 2010 - Version 1.01:</h6>
+          <h6>12 January 2012 - Version 1.03:</h6>
           <ul>
-            <li>Added option to config to create a shortcut on the current user's desktop.</li>
+            <li>Fixed a bug where the Hide NI DOS process did not close when the NearInfinity window was closed.</li>
+            <li>Replaced corrupt’s "CMDret_Stream" function with his "CMDret_RunReturn" function, as it is more appropriate and likely performs better in this situation.</li>
+            <li>Greatly improved logging.  The output should actually be readable now :-) .  It is still disabled by default.</li>
+            <li>Many other minor code improvements.</li>
           </ul>
-          <h6>22 July 2010 - Version 1.00:</h6>
+          <h6>09 October 2022 - Version 2.0.0.0:</h6>
           <ul>
-            <li>Initial release</li>
+            <li>Complete rewrite of codebase</li>
+            <li>Support for NI-specific parameters</li>
           </ul>
           <address>
             <span class="footer">Hide NI DOS &gt; Version History</span> &#8226;<a href="#top">Back To Top</a>
